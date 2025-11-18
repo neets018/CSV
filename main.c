@@ -62,7 +62,8 @@ void filter_stream(FILE *istream, FILE *ostream) {
     auto recognized_count = sscanf(age_str, "%d", &age);
     if (recognized_count == 1) {
       if (age <= filter_age_max) {
-        // Write only the name followed by a newline to `ostream`
+        // Forward input line to `ostream`
+        // YOUR CODE HERE
         fprintf(ostream, "%s, %s", name, age_str);
       }
     } else {
